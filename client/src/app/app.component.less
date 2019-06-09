@@ -1,0 +1,49 @@
+@import 'less/mixins.less';
+@import 'less/breakpoints.less';
+
+.wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.content-main {
+    margin-top: 50px;
+    min-height: 100%;
+}
+
+.content-main.no-margin-top {
+    margin-top: 44px;
+}
+
+.content-main.loading::before {
+    position: fixed;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    opacity: 0.8;
+}
+
+.loading-spinner {
+    display: none;
+}
+
+.content-main.loading .loading-spinner {
+    display: block;
+    position: fixed;
+    z-index: 1001;
+    font-size: 36px;
+    top: 50%;
+    left: 50%;
+    .translate(-50%, -50%);
+}
+
+// Media breakpoints
+.media-breakpoint-md({
+    .content-main.no-margin-top {
+        margin-top: 0px;
+    }
+});

@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <app-navbar></app-navbar>
+  <div class="content-main" [ngClass]="{ 'loading': isLoading }">
+    <div class="loading-spinner "><span class="fas fa-spinner fa-pulse"></span></div>
+    <div class="px-3 px-md-5 mx-md-5">
+      <app-alert-messages></app-alert-messages>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>

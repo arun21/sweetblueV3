@@ -1,0 +1,33 @@
+@import 'less/global-variables';
+@import 'less/breakpoints';
+
+.hidden-xs {
+    display: none;
+}
+.page-item {
+    cursor: pointer;
+}
+.page-item.disabled {
+    cursor: initial;
+}
+.page-item.active .page-link {
+    color: #fff;
+    background-color: @color-black;
+    border-color: #000;
+}
+.page-item.disabled .page-link {
+    color: @color-light-gray;
+}
+
+.page-link {
+    padding: 4px 8px;
+}
+
+.media-breakpoint-sm({
+    .hidden-xs {
+        display: initial;
+    }
+    .page-link {
+        padding: .5rem .75rem;
+    }
+});

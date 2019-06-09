@@ -1,0 +1,28 @@
+<div class="store-content py-1 py-md-5 py-xl-5">
+  <div class="d-flex mt-4 mx-auto ml-md-0 px-4 px-md-5">
+    <div class="profile-icon">
+      <a class="user-icon" routerLink="/store/profile"></a>
+    </div>
+    <div class="right-icons d-flex mr-0 ml-auto align-items-center">
+      <form class="input-group" (submit)="onSearchFormSubmit()" [formGroup]="searchForm" [hidden]="!isSearchBoxVisible">
+        <input id="search-box" type="text" class="form-control" placeholder="Username" formControlName="searchQuery">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit">
+            <span class="fas fa-search"></span>
+          </button>
+        </div>
+        <button type="button" class="btn-clear-bg cursor-pointer" (click)="toggleSearchControl(false)">
+            <span class="fas fa-times"></span>
+        </button>
+      </form>
+      <button type="button" class="btn-clear-bg cursor-pointer" (click)="toggleSearchControl(true)" [hidden]="isSearchBoxVisible">
+        <span class="fas fa-search"></span>
+      </button>
+      <a class="text-uppercase ml-2" routerLink="/store/cart" routerLinkActive="active">Cart({{ cartCount }})</a>
+    </div>
+  </div>
+  <div class="tobbar-wrapper">
+    <app-topbar></app-topbar>
+  </div>
+  <router-outlet></router-outlet>
+</div>

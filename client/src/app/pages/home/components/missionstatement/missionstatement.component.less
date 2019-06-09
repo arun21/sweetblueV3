@@ -1,0 +1,110 @@
+@import 'less/global-variables.less';
+@import 'less/breakpoints.less';
+@import 'less/mixins.less';
+
+.divparent {
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/img/values/1245.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link-bordered {
+    font-size: 14px;
+    line-height: 20px;
+    border-color: #fffff4;
+    color: inherit;
+    font-family: @ttnorms-regular;
+}
+
+.container {
+    position: absolute;
+    right: 50px;
+}
+
+.c2-title,
+.container:before {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    color: #fffff4;
+    font-size: 34px;
+    .rotate(270deg);
+}
+.container:before {
+    right: 5px;
+    content: "Mission Statement";
+    transform-origin: bottom right;
+}
+
+.c2-title {
+    visibility: hidden;
+    right: auto;
+    top: 0;
+    left: 250px;
+    transform: rotate(270deg);
+}
+
+.carousel-item.active .c2-title {
+    visibility: initial;
+}
+
+.position-me {
+    top: -200px;
+    left: 50px;
+    transform: translateX(-0%);
+    transform-origin: right;
+}
+
+.rotate-me {
+    color: #fffff4;
+    font-size: 62px;
+}
+
+.margin-top-50 {
+    margin-top: 50px !important;
+}
+
+// Media breakpoints
+.media-breakpoint-sm({
+    .c2-title {
+        left: 240px;
+    }
+});
+
+// Media breakpoints
+.media-breakpoint-md({
+    .link-bordered {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .c2-title,
+    .container:before {
+        font-size: 48px;
+    }
+    .container:before {
+        right: 25px;
+    }
+    .c2-title {
+        left: 170px;
+    }
+});
+
+// Media breakpoints
+.media-breakpoint-lg({
+    .link-bordered {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .c2-title,
+    .container:before {
+        font-size: 58px;
+    }
+    .container:before {
+        right: 35px;
+    }
+    .c2-title {
+        left: 120px;
+    }
+});

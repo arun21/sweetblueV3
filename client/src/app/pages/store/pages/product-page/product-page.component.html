@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto py-5" *ngIf="product">
+      <div class="f-lg">
+        {{product.title}}
+      </div>
+      <div class="text-muted text-right mt-3">
+        {{product.vendor}}
+      </div>
+      <div class="col-10 col-md-6 mx-auto">
+        <img class="img-fluid" [src]="product.imageUrls[0]" alt="Product Image">
+      </div>
+      <div class="mb-4 row justify-content-between">
+        <div class="add-to-cart-wrapper col-6">
+          <button class="btn btn-primary" (click)="addItemToCart()">
+            Add to Cart
+          </button>
+        </div>
+        <div class="price col-6 text-right">
+          <span class="text-muted f-lg">
+            {{product.price.currency}} {{product.price.price}}
+          </span>
+        </div>
+      </div>
+      <div>
+        <p>
+          <a class="text-hover-green" data-toggle="collapse" href="#overviewCollapse" aria-expanded="false"
+            aria-controls="overviewCollapse">
+            <span>Overview</span>
+            <span class="text-green pl-2 f-sm fas fa-plus"></span>
+          </a>
+        </p>
+        <div class="collapse show" id="overviewCollapse">
+          <div class="card card-body" [innerHTML]="product.description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

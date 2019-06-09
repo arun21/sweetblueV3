@@ -1,0 +1,45 @@
+@import "less/global-variables.less";
+@import "less/mixins.less";
+@import "less/breakpoints.less";
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: @color-white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+li a {
+    display: block;
+    color: @color-black;
+    padding: 8px 16px;
+}
+
+li a.active {
+    background-color: #e8f1ec;
+    border-left-style: solid;
+    border-left-color: @color-black;
+}
+
+li a:hover:not(.active) {
+    background-color: #e8f1ec;
+    color: @color-black;
+    border-left-style: solid;
+    border-left-color: @color-black;
+}
+
+.media-breakpoint-md(
+  {.padding-bottom-100 {padding-bottom: 100px;} .padding-top-100 {padding-top:
+    100px;}}
+) !important;
+
+.media-breakpoint-lg({.m-left-200 {margin-left: 100px;}});
+
+.media-breakpoint-xl({.m-left-200 {margin-left: 200px;}});
+
+@media (min-width: 320px){
+   
+}

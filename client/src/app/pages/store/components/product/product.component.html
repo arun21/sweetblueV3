@@ -1,0 +1,17 @@
+<div class="product position-relative p-3 p-lg-4 my-5">
+  <div class="heart-btn p-1 float-right">
+    <button type="button" class="btn-clear-bg cursor-pointer f24 ml-auto mr-0" (click)="addProductToCart()">
+        <span class="far fa-heart"></span>
+    </button>
+  </div>
+  <div class="img-wrapper">
+    <img [src]="product.imageUrls[0]">
+  </div>
+  <div class="text-right text-muted f18">{{ product.vendor }}</div>
+  <div class="title text-left f18 my-3">
+    <a routerLink="/store/product/{{product._id}}">
+      {{ product.title }}
+    </a>
+  </div>
+  <div class="price text-left">{{ product.price.price }}</div>
+</div>

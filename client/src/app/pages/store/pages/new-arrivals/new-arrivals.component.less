@@ -1,0 +1,44 @@
+@import 'less/breakpoints';
+@import 'less/global-variables';
+@import 'less/mixins';
+
+.product-outer {
+    margin-left: 8.334%;
+}
+.top-banner-wrapper {
+    height: 150px;
+    position: relative;
+}
+.bg-img {
+    content: "";
+    background: url('/assets/img/images/j.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .translate(-50%, -50%);
+    z-index: 10;
+    color: @color-primary-red-light;
+}
+.media-breakpoint-sm({
+    .product-outer {
+        margin: 0
+    }
+    .top-banner-wrapper {
+        height: 180px;
+    }
+});
+
+.media-breakpoint-lg({
+    .top-banner-wrapper {
+        height: 300px;
+    }
+});

@@ -1,0 +1,182 @@
+<div class="signin-form-wrapper">
+  <form [formGroup]="registerForm" (submit)="onRegisterSubmit()">
+    <div *ngIf="formStage == 1" formGroupName="firstStage">
+      <div class="pt-4">
+        <h4>Get Started</h4>
+        <p class="f-xs text-lightgray">Sign up for new account, enter your <br>email and get started</p>
+      </div>
+      <div class="row  pt-5 mt-5">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email" [ngClass]="formHelper.getCssClasses(registerForm, 'firstStage.emailAddress')"
+              formControlName="emailAddress" required>
+            <div class="invalid-feedback" *ngIf="formHelper.getErrors(registerForm, 'firstStage.emailAddress')?.required">Please
+              enter your email address</div>
+            <div class="invalid-feedback" *ngIf="formHelper.getErrors(registerForm, 'firstStage.emailAddress')?.email">Email
+              address is not valid</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" [ngClass]="formHelper.getCssClasses(registerForm, 'firstStage.password')"
+              formControlName="password">
+            <div class="invalid-feedback" *ngIf="formHelper.getErrors(registerForm, 'firstStage.password')?.required">Please
+              enter a password</div>
+            <div class="invalid-feedback" *ngIf="formHelper.getErrors(registerForm, 'firstStage.password')?.minlength">Password
+              must be at least 6 characters long</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Confirm password" [ngClass]="formHelper.getCssClasses(registerForm, 'firstStage.confirmPassword')"
+              formControlName="confirmPassword">
+            <div class="invalid-feedback" *ngIf="formHelper.getErrors(registerForm, 'firstStage.confirmPassword')?.MatchPassword">Passwords do not match</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 pt-4">
+          <button type="button" class="btn btn-block btn-secondary b-rounded" (click)="validateFormSection('firstStage')">Next</button>
+          <div class="text-center pt-3 f-xs text-muted">
+            Already have an account?
+          </div>
+          <div class="text-center">
+            <a routerLink="/" [queryParams]="{m:'signin'}" class="f12 text-muted">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second part -->
+    <div *ngIf="formStage == 2" formGroupName="secondStage">
+      <div>
+        <button class="btn-clear-bg text-green cursor-pointer f-lg my-2 pl-0" type="button" (click)="formStage = 1">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <h4>Complete Profile</h4>
+        <p class="f-xs text-lightgray">Register via your email to begin shopping</p>
+        <div>
+          <img class="get-started-icon rounded-circle mr-3 img-camera" src="/assets/img/images/camera.png">
+          <img class="get-started-icon rounded-circle mr-3" src="/assets/img/images/p.png">
+          <img class="get-started-icon rounded-circle mr-3" src="/assets/img/images/q.png">
+        </div>
+      </div>
+      <div class="row  pt-5 mt-5">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Firstname" [ngClass]="formHelper.getCssClasses(registerForm, 'secondStage.firstName')"
+              formControlName="firstName" required>
+            <div class="invalid-feedback" *ngIf="formHelper.getErrors(registerForm, 'secondStage.firstName')?.required">Please
+              enter your first name</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Lastname" [ngClass]="formHelper.getCssClasses(registerForm, 'secondStage.lastName')"
+              formControlName="lastName" required>
+            <div class="invalid-feedback" *ngIf="formHelper.getErrors(registerForm, 'secondStage.lastName')?.required">Please
+              enter your last name</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Country" [ngClass]="formHelper.getCssClasses(registerForm, 'secondStage.country')"
+              formControlName="country" required>
+            <div class="invalid-feedback" *ngIf="formHelper.getErrors(registerForm, 'secondStage.country')?.required">Please
+              enter your country</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group phone-input-wrapper">
+            <label class="phone-ext text-muted" for="phone">+1</label>
+            <input type="number" id="phone" class="form-control phone-input" placeholder="Mobile Number" [ngClass]="formHelper.getCssClasses(registerForm, 'secondStage.phoneNumber')"
+              formControlName="phoneNumber" required>
+            <div class="invalid-feedback float-left" *ngIf="formHelper.getErrors(registerForm, 'secondStage.phoneNumber')?.required">Please
+              enter your phone number</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 py-4">
+          <button type="button" class="btn btn-block btn-secondary b-rounded" (click)="validateFormSection('secondStage')">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third part -->
+    <div *ngIf="formStage == 3">
+      <div class="pb-4">
+        <button class="btn-clear-bg text-green cursor-pointer f-lg my-2 pl-0" type="button" (click)="formStage = 2">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <h4>Complete Profile</h4>
+        <p class="f-xs text-lightgray">Register via your email to begin shopping</p>
+        <div>
+          <img class="get-started-icon rounded-circle mr-3" src="/assets/img/images/p.png">
+        </div>
+      </div>
+      <ng-template #tagBtnTemplate let-tag="tag" let-i="i" let-visible="v">
+        <button *ngIf="visible" class="btn-clear-bg tag-btn b-rounded m-1 cursor-pointer f-sm px-3 py-1 {{i% 3 === 0 ? 'bd-highlight' : 'flex-grow-1'}}"
+          type="button" (click)="tag.isChecked = !tag.isChecked" [ngClass]="{'checked': tag.isChecked}">
+          {{tag.name}}
+        </button>
+      </ng-template>
+
+      <ng-container *ngFor="let tag of tags; let i = index; let even = even; let last = last;">
+        <div>
+          <div class="row pt-1" *ngIf="even">
+            <ng-container *ngTemplateOutlet="tagBtnTemplate; context: { i: i, tag: tag, v: true }"></ng-container>
+            <ng-container *ngTemplateOutlet="tagBtnTemplate; context: { i: i+1, tag: tags[i+1], v: !last }"></ng-container>
+          </div>
+        </div>
+      </ng-container>
+      <div class="invalid-feedback d-block" *ngIf="validationError === 'tags'">At least three labels must be selected</div>
+      <div class="row pt-2">
+        <button class="btn-clear-bg text-green cursor-pointer f-lg my-2 mr-0 ml-auto" type="button" (click)="validateCheckedTags()">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Fourth part -->
+    <div *ngIf="formStage == 4">
+      <div class="pb-4">
+        <button class="btn-clear-bg text-green cursor-pointer f-lg my-2 pl-0" type="button" (click)="formStage = 3">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <h4>Complete Profile</h4>
+        <p class="f-xs text-lightgray">Register via your email to begin shopping</p>
+        <div>
+          <img class="get-started-icon rounded-circle mr-3" src="/assets/img/images/p.png">
+        </div>
+      </div>
+      <div class="row pt-1 filter-list" cdkDropList (cdkDropListDropped)="drop($event)">
+        <div class="filter-box col-10 mx-auto d-flex px-0 pt-1" *ngFor="let filter of getSortedFilters(); let i = index;"
+          cdkDrag>
+          <div class="filter-dotted-line"></div>
+          <button class="btn-clear-bg filter-btn b-rounded m-1 cursor-pointer f-xs mr-0 ml-auto" type="button" (click)="filter.isChecked = !filter.isChecked"
+            [ngClass]="{'checked': filter.isChecked}">
+            {{filter.name}}
+          </button>
+        </div>
+        <div class="invalid-feedback d-block" *ngIf="validationError === 'filters'">At least three filters must be
+          selected</div>
+      </div>
+      <div class="row pt-5 pb-3">
+        <button class="btn-clear-bg text-green cursor-pointer f-lg my-2 mr-0 ml-auto" type="submit">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,78 @@
+{
+  "name": "sweetblu",
+  "main": "app.js",
+  "version": "1.0.0",
+  "description": "SweetBlu",
+  "scripts": {
+    "start": "nodemon app.js",
+    "prod": "pm2 start ecosystem.config.js --env production",
+    "dev": "pm2 start ecosystem.config.js"
+  },
+  "engines": {
+    "node": "8.12.0",
+    "npm": "6.4.1"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^7.0.3",
+    "@angular/cdk": "^7.1.0",
+    "@angular/common": "^7.0.3",
+    "@angular/compiler": "^7.0.3",
+    "@angular/core": "^7.0.3",
+    "@angular/forms": "^7.0.3",
+    "@angular/http": "^7.0.3",
+    "@angular/platform-browser": "^7.0.3",
+    "@angular/platform-browser-dynamic": "^7.0.3",
+    "@angular/router": "^7.0.3",
+    "@sendgrid/mail": "^6.3.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "core-js": "^2.5.4",
+    "cors": "^2.8.4",
+    "csv-parser": "^2.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.6",
+    "mongoose-delete": "^0.4.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "rxjs": "~6.3.3",
+    "rxjs-compat": "^6.3.3",
+    "validator": "^10.9.0",
+    "zone.js": "~0.8.26",
+    "nodemon": "^1.18.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.10.0",
+    "@angular/cli": "^7.0.5",
+    "@angular/compiler-cli": "^7.0.3",
+    "@angular/language-service": "^7.0.3",
+    "@types/jasmine": "^2.8.9",
+    "@types/jasminewd2": "~2.0.5",
+    "@types/node": "~10.12.0",
+    "codelyzer": "~4.5.0",
+    "jasmine-core": "~3.3.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~3.1.1",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^1.3.1",
+    "nodemon": "^1.18.4",
+    "protractor": "~5.4.1",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.11.0",
+    "typescript": "^3.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://achahal@bitbucket.org/krishjan05/sweetblu-dev.git"
+  },
+  "author": "Krishna Kanhaiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/krishjan05/sweetblu-dev/issues"
+  },
+  "homepage": "https://sweetblu-dev.herokuapp.com"
+}

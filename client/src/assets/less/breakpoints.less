@@ -1,0 +1,29 @@
+@sm: 575px;
+@md: 768px;
+@lg: 992px;
+@xl: 1200px;
+
+/* Media breakpoints */
+.media-breakpoint-sm(@rules) {
+    @media (min-width: @sm) {
+        @rules();
+    }
+}
+
+.media-breakpoint-md(@rules) {
+    @media (min-width: @md) {
+        @rules();
+    }
+}
+
+.media-breakpoint-lg(@rules) {
+    @media (min-width: @lg) {
+        @rules();
+    }
+}
+
+.media-breakpoint-xl(@rules) {
+    @media (min-width: @xl) {
+        @rules();
+    }
+}

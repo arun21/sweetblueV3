@@ -1,0 +1,35 @@
+<div class="signin-form-wrapper">
+  <form [formGroup]="loginForm" (submit)=onLoginSubmit()>
+    <div class="pt-4">
+      <h4>Sign in</h4>
+      <p class="f-xs text-lightgray">Sign in to your account, enter your <br>email to begin.</p>
+    </div>
+    <div class="row pt-5 mt-5">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <input type="text" class="form-control" id="emailAddress" placeholder="Email" [ngClass]="getCssClasses('email')"
+            formControlName="email" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <input type="password" class="form-control" id="password" [ngClass]="getCssClasses('password')"
+            formControlName="password" placeholder="Password" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 pt-4">
+        <button type="submit" class="btn btn-block btn-secondary b-rounded">Sign In</button>
+        <div class="text-center pt-3">
+          <a routerLink="/forgotpassword" class="f12 text-muted">Forgot your password?</a>
+        </div>
+        <div class="text-center">
+          <a routerLink="/" [queryParams]="{m:'signup'}" class="f12 text-muted">New to SweetBlu?</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

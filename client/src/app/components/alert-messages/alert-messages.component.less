@@ -1,0 +1,19 @@
+@import 'less/mixins.less';
+
+.alert-wrapper{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1060;
+}
+.alert {
+    border-radius: 50px;
+}
+.alert-dismissible .close {
+    top: 50%;
+    .translate(0, -50%);
+}
+.close:focus {
+    outline: none;
+}

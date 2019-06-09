@@ -1,0 +1,29 @@
+@import 'less/global-variables.less';
+@import 'less/breakpoints.less';
+
+.topbar {
+    border-bottom: 1px solid @color-light-gray;
+    line-height: 14px;
+    padding: 0 30px 13px 30px;
+    font-family: @ttnorms-regular;
+    text-transform: uppercase;
+}
+.topbar-link {
+    padding: 0 10px;
+}
+.topbar-link:hover,
+.topbar-link.active {
+    color: @color-primary-red;
+}
+
+.media-breakpoint-lg({
+    .topbar-link {
+        padding: 0 35px;
+    }
+});
+
+.media-breakpoint-xl({
+    .topbar-link {
+        padding: 0 50px;
+    }
+});

@@ -1,0 +1,109 @@
+@import "less/global-variables.less";
+@import "less/breakpoints.less";
+.padding-top-100 {
+  padding-top: 50px;
+}
+
+.signuptext {
+  font-family: @font-primary-6;
+  font-size: 28px;
+  text-align: left;
+  color: @color-white !important;
+  line-height: 1.2;
+}
+
+.signup-row {
+  position: relative;
+  border-bottom: 5px solid @color-green;
+  padding-bottom: 30px;
+  padding-right: 1.5em;
+}
+
+.padding-bottom-100 {
+  padding-bottom: 50px;
+}
+
+.arrow-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+/* right bounce */
+
+@-webkit-keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  60% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+@-moz-keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-30px);
+  }
+  60% {
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  60% {
+    -ms-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+/* /right bounce */
+
+/* assign bounce */
+
+.move-right {
+  -webkit-animation: bounceRight 2s;
+  animation: bounceRight 2s;
+  float: right;
+  animation-iteration-count: 3;
+}
+
+.media-breakpoint-md(
+  {.padding-bottom-100 {padding-bottom: 100px;} .padding-top-100 {padding-top:
+    100px;} .signuptext {font-family: @font-primary-6; font-size: 38px;
+    text-align: left; color: @color-black; line-height: 1.2;}}
+) !important;
+
+.media-breakpoint-lg({.m-left-200 {margin-left: 100px;}});
+
+.media-breakpoint-xl({.m-left-200 {margin-left: 200px;}});

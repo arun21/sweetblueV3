@@ -1,0 +1,23 @@
+@import 'less/breakpoints';
+@import 'less/global-variables';
+
+.modal-dialog {
+    margin-top: 6rem;
+    max-width: 380px;
+}
+.modal-content {
+    border-radius: 24px;
+    border-color: @color-light-gray;
+}
+
+.media-breakpoint-sm({
+    .modal-dialog {
+        margin-top: 5rem;
+    }
+});
+
+.media-breakpoint-md({
+    .modal-dialog {
+        margin-top: 4rem;
+    }
+});

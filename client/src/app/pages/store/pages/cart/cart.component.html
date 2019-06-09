@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row" *ngIf="cartItemsCount > 0; else noCartItemsBlock">
+        <div class="col-10 col-md-8 mx-auto pt-4" *ngFor="let item of cartItems">
+            <div class="card rounded shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-3 px-md-4">
+                            <img class="img-fluid m-auto" [src]="item.product.imageUrls[0]" alt="Image">
+                        </div>
+                        <div class="col-9 pr-3 pr-md-5">
+                            <a routerLink="/store/product/{{item.product._id}}">
+                                <h6>{{ item.product.title }}</h6>
+                            </a>
+                            <p class="text-muted f-sm">Quantity: {{item.quantity}}</p>
+                            <p class="mt-2">${{item.product.price.price}}</p>
+                            <button class="remove-icon btn-clear-bg cursor-pointer" (click)="removeItemFromCart(item._id)">
+                                <span class="fas fa-times f-lg"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #noCartItemsBlock>
+        <div class="pt-5 text-center">
+            <h5>Your shopping cart is empty.</h5>
+        </div>
+    </ng-template>
+</div>

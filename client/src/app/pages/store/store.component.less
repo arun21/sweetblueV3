@@ -1,0 +1,28 @@
+@import 'less/global-variables';
+@import 'less/breakpoints';
+.store-content {
+    font-family: @ttnorms-regular;
+}
+.right-icons {
+    font-size: 1.05rem;
+    margin:0;
+}
+.profile-icon {
+    width: 42px;
+    height: 42px;
+}
+.user-icon {
+    widows: 100%;
+    height: 100%;
+    display: block;
+    background: url('/assets/img/images/q.png') no-repeat;
+    background-size: contain;
+}
+#search-box:focus {
+    border-color: initial;
+}
+.media-breakpoint-lg({
+    .store-content {
+        padding-top: 50px;
+    }
+});

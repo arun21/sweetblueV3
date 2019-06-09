@@ -1,0 +1,89 @@
+@import "less/global-variables.less";
+@import "less/mixins.less";
+@import "less/breakpoints.less";
+
+.padding-top-100 {
+  padding-top: 50px;
+}
+
+.heading-1 {
+  font-family: @font-primary-4;
+  font-size: 36px;
+  text-align: left;
+  color: @color-black;
+}
+.heading-2 {
+  font-family: @ttnorms-regular;
+  font-size: 48px;
+  text-align: left;
+  color: @color-black;
+}
+
+.heading-3 {
+  font-family: @font-primary-5;
+  font-size: 24px;
+  text-align: center;
+  color: @color-white;
+  font-weight: 100;
+}
+.heading-4 {
+  font-family: @font-primary-5;
+  font-size: 18px;
+  text-align: center;
+  color: @color-black;
+  line-height: 1;
+  font-weight: 600;
+
+  &.align-justify {
+    text-align: justify;
+  }
+}
+.heading-5 {
+  font-family: @font-primary-6;
+  font-size: 36px;
+  text-align: left;
+  color: @color-black;
+  font-weight: 100;
+  line-height: 1.2;
+}
+.heading-6 {
+  font-family: @font-primary-6;
+  font-size: 36px;
+  text-align: left;
+  color: @color-black;
+  line-height: 1;
+  &.align-center {
+    text-align: center;
+  }
+}
+.heading-7 {
+  font-family: @font-primary-3;
+  font-size: 18px;
+  text-align: left;
+  color: @color-green;
+
+  &.align-center {
+    text-align: center;
+  }
+}
+.div-rect {
+  background: url("/assets/img/home/half-ellipse.png") no-repeat;
+  //min-height: 260px;
+  margin-top: 10%;
+  padding-bottom: 5%;
+  background-size: cover;
+}
+
+.width-100 {
+  width: 100% !important;
+  height: auto;
+}
+
+.media-breakpoint-lg(
+  {.padding-top-180 {padding-top: 180px;}.heading-1 {font-family: @font-primary-4;
+    font-size: 42px; text-align: left; color: @color-black; font-weight: 800;line-height:
+    2.5;} .heading-2 {font-family: @font-primary-6; font-size: 62px; text-align:
+    left; color: @color-black;line-height: 1.0;} .heading-4 {font-family: @font-primary-5;
+    font-size: 18px; text-align: center; color: @color-black; line-height: 1; font-weight:
+    600;}}
+);

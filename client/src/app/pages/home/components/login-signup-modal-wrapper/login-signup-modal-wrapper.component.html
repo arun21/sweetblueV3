@@ -1,0 +1,16 @@
+<div>
+  <div id="wrapperModal" class="modal p-5" tabindex="-1" role="dialog">
+    <div class="modal-dialog mx-auto" role="document">
+      <div class="modal-content">
+        <div class="modal-body px-5 pt-3">
+          <div *ngIf="modalState == 'signin'">
+            <app-login></app-login>
+          </div>
+          <div *ngIf="modalState == 'signup'">
+            <app-register></app-register>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

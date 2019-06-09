@@ -1,0 +1,90 @@
+@import 'less/global-variables.less';
+@import 'less/breakpoints.less';
+
+.close {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.section-subscribe {
+    color: #fff;
+}
+
+.section-subscribe .slogan-text-wrapper {
+    width: 100%;
+    color: inherit;
+    min-height: 80vh;
+    left: 0;
+}
+
+.section-subscribe {
+    background: url('/assets/img/home/optimized/newsletter-modal-bg.jpg') no-repeat;
+    background-size: cover;
+}
+
+.subscribe-form .form-control {
+    font-size: 14px;
+    height: 26px;
+    text-align: center;
+    border-radius: 50px;
+    font-family: @ttnorms-regular;
+}
+
+.link-bordered {
+    border-color: #fff;
+    color: inherit;
+    background: transparent;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Media breakpoints */
+.media-breakpoint-sm({
+    .modal-xl {
+        width: 92%;
+        max-width: 1400px;
+    }
+    .subscribe-form .form-control {
+        font-size: 16px;
+        height: 30px;
+    }
+    .link-bordered { 
+        font-size: 16px;
+    }
+});
+
+.media-breakpoint-md({
+    .modal-xl {
+        width: 92%;
+        max-width: 1400px;
+    }
+    .subscribe-form .form-control {
+        font-size: 18px;
+        height: 36px;
+    }
+});
+
+.media-breakpoint-lg({
+    .modal-xl {
+        width: 92%;
+        max-width: 1400px;
+    }
+    .section-subscribe .slogan-text-wrapper {
+        min-height: 92vh;
+    }
+    .link-bordered {
+        font-size: 30px;
+        line-height: 40px;
+    }
+});
+
+.media-breakpoint-xl({
+    .modal-xl {
+        width: 92%;
+        max-width: 1400px;
+    }
+    .subscribe-form .form-control {
+        font-size: 24px;
+        height: 50px;
+    }
+});

@@ -1,0 +1,96 @@
+<nav id="navbar-top" class="navbar navbar-expand-lg fixed-top navbar-dark py-1">
+  <a class="navbar-brand f28 py-0" routerLink="/">
+    <span class="nav-title">Sweetblu.</span>
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarLinks"
+    aria-controls="navbarLinks"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarLinks">
+    <div class="mr-2 ml-auto">
+      <div class="nav-social-links f24">
+        <a href="https://twitter.com/sweeeetblu" target="_blank">
+          <span class="fab fa-twitter"></span>
+        </a>
+        <a href="https://www.instagram.com/sweeeetblu" target="_blank">
+          <span class="fab fa-instagram"></span>
+        </a>
+        <a href="https://medium.com/@sweetblu" target="_blank">
+          <span class="fab fa-medium"></span>
+        </a>
+        <a href="https://www.pinterest.ca/sweeeetblu" target="_blank">
+          <span class="fab fa-pinterest"></span>
+        </a>
+      </div>
+    </div>
+
+    <ul
+      class="navbar-nav mr-0 nav-right-links-wrapper ml-auto mt-2 mt-lg-0 f12"
+    >
+      <!--
+        <li class="nav-item">
+          <a class="nav-link-right nav-link" [hidden]="isLoggedIn" routerLink="/" [queryParams]="{m:'signin'}"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link-right sign-up-btn nav-link" [hidden]="isLoggedIn" routerLink="/" [queryParams]="{m:'signup'}"
+            routerLinkActive="active">Sign Up</a>
+        </li>
+      -->
+      <li class="nav-item">
+        <a
+          class="nav-link-right nav-link d-lg-none"
+          [hidden]="!isLoggedIn"
+          routerLink="/store"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link-right nav-link d-lg-none"
+          [hidden]="!isLoggedIn"
+          routerLink="/store/newarrivals"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active"
+          >New Arrivals</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link-right nav-link d-lg-none" [hidden]="!isLoggedIn"
+          >By Lifestyle</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link-right nav-link d-lg-none"
+          href="https://medium.com/@sweetblu"
+          target="_blank"
+          >Blog</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link-right nav-link d-lg-none">Pets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link-right nav-link d-lg-none">Sale</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link-right nav-link"
+          (click)="onLogoutClick()"
+          [hidden]="!isLoggedIn"
+          >Logout</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

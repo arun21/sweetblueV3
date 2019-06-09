@@ -1,0 +1,135 @@
+@import 'less/global-variables.less';
+@import 'less/mixins.less';
+@import 'less/breakpoints.less';
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-header .close {
+    display: none;
+}
+
+.phone-img {
+    position: relative;
+    background: url('/assets/img/social/halfiphone.png') no-repeat;
+    background-size: contain;
+    background-position: -8px;
+    height: 260px;
+    width: 200px;
+}
+
+.phone-img-content {
+    position: absolute;
+    top: 60px;
+    left: 44px;
+    right: 52px;
+    bottom: 35px;
+}
+
+.phone-img-content .header {
+    font-size: 14px;
+    text-align: left;
+}
+
+.header .social {
+    float: right;
+    font-size: 10px;
+}
+
+.carousel-btn {
+    display: inline-block;
+    background: @color-primary-1-light;
+    width: 50px;
+    height: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.carousel-btn:hover,
+.carousel-btn.active {
+    background: @color-primary-1;
+}
+
+.description {
+    font-size: 14px;
+    width: 200px;
+    color: @color-gray;
+    font-weight: 100;
+    font-family: @ttnorms-regular;
+}
+
+.input-email-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.input-email-icon {
+    background: @color-primary-1;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    left: -15px;
+    top: 1px;
+    z-index: 1;
+    padding: 0 5px;
+    .translate(100%);
+}
+
+.input-email {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-right-color: @color-primary-1;
+    padding: 2px;
+    line-height: 18px;
+    height: 32px;
+    padding-left: 50px;
+    font-size: 14px;
+    font-weight: 100;
+    width: 70%;
+}
+
+.input-email:focus {
+    border-color: #ced4da;
+    border-right-color: @color-primary-1;
+    box-shadow: none;
+}
+
+.input-email-btn {
+    width: 30%;
+    right: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #fff;
+    background: @color-primary-1;
+    border: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    outline: none;
+}
+
+/* Media breakpoints */
+.media-breakpoint-md({
+    .phone-img {
+        height: 380px;
+        width: 300px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .form-control,
+    .input-email-btn {
+        font-size: 16px;
+        height: 38px;
+        line-height: 24px;
+    }
+    .input-email-icon {
+        border-width: 3px;
+        left: -10px;
+        top: 4px;
+        padding: 0 5px;
+    }
+});
