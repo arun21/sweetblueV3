@@ -39,7 +39,7 @@
     "passport-jwt": "^4.0.0",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.3.3",
-    "validator": "^10.9.0",
+    "validator": "^13.7.0",
     "zone.js": "~0.8.26",
     "nodemon": "^1.18.4"
   },
