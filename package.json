@@ -32,7 +32,7 @@
     "csv-parser": "^2.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.3.6",
     "mongoose-delete": "^0.4.0",
     "passport": "^0.4.0",
